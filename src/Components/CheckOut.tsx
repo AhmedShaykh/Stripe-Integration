@@ -8,7 +8,7 @@ const CheckOut = () => {
     return (
         <div className="my-2">
             <Button
-                className="text-xl font-semibold py-4 px-6 rounded-lg bg-blue-700 hover:bg-white hover:text-black"
+                className="text-xl font-semibold p-6 rounded-lg bg-blue-700 hover:bg-white hover:text-black"
                 onClick={handleCheckOut}
             >
                 Check Out
