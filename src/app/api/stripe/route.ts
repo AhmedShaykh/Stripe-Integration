@@ -21,8 +21,8 @@ export const POST = async (request: NextRequest) => {
                 payment_method_types: ["card"],
                 billing_address_collection: "auto",
                 shipping_options: [
-                    { shipping_rate: "shr_1NO1kuBYP40wltzrhGKJR1zY" },
                     { shipping_rate: "shr_1NO1jCBYP40wltzrhRn0EU1H" },
+                    { shipping_rate: "shr_1NO1kuBYP40wltzrhGKJR1zY" },
                 ],
                 invoice_creation: {
                     enabled: true,
@@ -44,7 +44,7 @@ export const POST = async (request: NextRequest) => {
                         },
                     };
                 }),
-                success_url: `${request.headers.get("origin")}/success`,
+                success_url: `${request.headers.get("origin")}/`,
                 cancel_url: `${request.headers.get("origin")}/?canceled=true`,
             });
 

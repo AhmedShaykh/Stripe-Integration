@@ -1,4 +1,5 @@
 "use client";
+import getStipePromise from "@/lib/stripe";
 import { Button } from "./ui/button";
 
 const products = [
@@ -26,6 +27,8 @@ const CheckOut = () => {
 
     const handleCheckOut = async () => {
 
+        const stripe = await getStipePromise();
+
         const response = await fetch("/api/stripe/", {
             method: "POST",
             headers: {
@@ -34,6 +37,12 @@ const CheckOut = () => {
             cache: "no-cache",
             body: JSON.stringify(products)
         });
+
+        const data = await response.json();
+
+        if (data.session) {
+            stripe?.redirectToCheckout({ sessionId: data.session.id });
+        }
 
     };
 
