@@ -11,8 +11,6 @@ export const POST = async (request: NextRequest) => {
 
     const body = await request.json();
 
-    console.log(body);
-
     try {
 
         if (body.length > 0) {
@@ -46,12 +44,11 @@ export const POST = async (request: NextRequest) => {
                         },
                     };
                 }),
-                phone_number_collection: {
-                    enabled: false,
-                },
                 success_url: `${request.headers.get("origin")}/success`,
                 cancel_url: `${request.headers.get("origin")}/?canceled=true`,
             });
+
+            return NextResponse.json({ session });
 
         }
         else {
