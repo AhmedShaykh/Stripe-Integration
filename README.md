@@ -1,1 +1,1 @@
-# Stripe Integration In Next.JS!
+# Stripe Integration!
