@@ -1,0 +1,26 @@
+{
+  "name": "server-mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedShaykh/Stripe-Integration.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AhmedShaykh/Stripe-Integration/issues"
+  },
+  "homepage": "https://github.com/AhmedShaykh/Stripe-Integration#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "stripe": "^18.2.0"
+  }
+}
